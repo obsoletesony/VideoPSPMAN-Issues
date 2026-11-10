@@ -1,0 +1,115 @@
+name: "Report a VideoPSPMAN bug / 不具合を報告"
+description: "Report a problem in English or Japanese / 英語・日本語で報告できます"
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what happened. Fill in what you know; "I don't know" is fine.
+        
+        問題の内容を教えてください。分からない項目は「分かりません」で大丈夫です。
+        
+        **This report is public.** Never share passwords, Jellyfin access tokens, Quick Connect codes, private network addresses, session files, or copyrighted video files.
+        **この報告は公開されます。** パスワード、トークン、Quick Connect コード、個人情報、動画ファイルは投稿しないでください。
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Where did it happen? / 問題の種類"
+      options:
+        - "Memory Stick library or local video playback"
+        - "Jellyfin connection or Quick Connect"
+        - "Jellyfin library browsing"
+        - "Jellyfin playback, buffering or seeking"
+        - "Video/audio compatibility or subtitles"
+        - "Controls, settings or interface"
+        - "Startup, shutdown or crash"
+        - "Other / その他"
+    validations:
+      required: true
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: "Hardware or emulator / 実機・エミュレーター"
+      options:
+        - "Physical PSP / PSP 実機"
+        - "PPSSPP emulator"
+        - "Not sure / 不明"
+    validations:
+      required: true
+  - type: dropdown
+    id: model
+    attributes:
+      label: "PSP model / PSP の機種"
+      options:
+        - "PSP-1000"
+        - "PSP-2000"
+        - "PSP-3000"
+        - "PSP Go (N1000)"
+        - "PSP Street (E1000)"
+        - "Not sure / 不明"
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: "Playback source / 再生元"
+      options:
+        - "Memory Stick (local)"
+        - "Jellyfin (Wi-Fi)"
+        - "Not sure / 不明"
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: "System software / CFW"
+      description: "Optional. 例: 6.61 ARK-4, 5.00 M33-4, or I don't know"
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: "VideoPSPMAN version / Build ID"
+      description: "Optional. Include the version or build identifier if available."
+    validations:
+      required: false
+  - type: textarea
+    id: happened
+    attributes:
+      label: "What happened? / 何が起きましたか？"
+      description: "Explain what you expected and what happened instead. / 期待した結果と実際の結果"
+      placeholder: "I opened VideoPSPMAN, selected a video, and then..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce / 再現手順"
+      description: "What did you do just before the problem? Does it happen again? / 発生直前の操作と再現性"
+      placeholder: |
+        1. Open VideoPSPMAN
+        2. Select ...
+        3. Press ...
+    validations:
+      required: false
+  - type: textarea
+    id: media-details
+    attributes:
+      label: "Video or Jellyfin details / 動画・Jellyfin の情報"
+      description: "Optional. Local: MP4/MKV, resolution, H.264 profile, audio codec, SRT subtitles. Jellyfin: server version, whether login and browsing worked, where playback failed. Do not post private addresses or tokens."
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Screenshots or diagnostic details / 画像・診断情報"
+      description: "Optional. Drag images or a redacted text log into this field. The final log path may vary by build. Do not upload movie files or secrets."
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: "Before submitting / 投稿前の確認"
+      options:
+        - label: "I checked my report and attachments for private information and did not upload passwords, tokens, codes, session files, or video files. / 個人情報や機密情報、動画ファイルを含めていません。"
+          required: true
