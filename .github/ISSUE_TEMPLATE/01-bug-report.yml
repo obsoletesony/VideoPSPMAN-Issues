@@ -9,7 +9,7 @@ body:
         
         問題の内容を教えてください。分からない項目は「分かりません」で大丈夫です。
         
-        **This report is public.** Never share passwords, Jellyfin access tokens, Quick Connect codes, private network addresses, session files, or copyrighted video files.
+        **Reports from physical PSP hardware only. PPSSPP emulator reports are not accepted.**\n        **PSP実機で発生した問題のみ受け付けます。PPSSPPなどのエミュレーターでの報告は対象外です。**\n\n        **This report is public.** Never share passwords, Jellyfin access tokens, Quick Connect codes, private network addresses, session files, or copyrighted video files.
         **この報告は公開されます。** パスワード、トークン、Quick Connect コード、個人情報、動画ファイルは投稿しないでください。
   - type: dropdown
     id: area
@@ -27,19 +27,9 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: hardware
-    attributes:
-      label: "Hardware or emulator / 実機・エミュレーター"
-      options:
-        - "Physical PSP / PSP 実機"
-        - "PPSSPP emulator"
-        - "Not sure / 不明"
-    validations:
-      required: true
-  - type: dropdown
     id: model
     attributes:
-      label: "PSP model / PSP の機種"
+      label: "Physical PSP model / PSP実機の機種"
       options:
         - "PSP-1000"
         - "PSP-2000"
