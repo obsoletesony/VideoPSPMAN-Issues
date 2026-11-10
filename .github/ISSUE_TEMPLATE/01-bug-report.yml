@@ -9,11 +9,6 @@ body:
         
         問題の内容を教えてください。分からない項目は「分かりません」で大丈夫です。
         
-        **Reports from physical PSP hardware only.**
-        **PSP実機で発生した問題をご報告ください。**
-
-        **This report is public.** Never share passwords, Jellyfin access tokens, Quick Connect codes, private network addresses, session files, or copyrighted video files.
-        **この報告は公開されます。** パスワード、トークン、Quick Connect コード、個人情報、動画ファイルは投稿しないでください。
   - type: dropdown
     id: area
     attributes:
