@@ -25,19 +25,6 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: model
-    attributes:
-      label: "Physical PSP model / PSP実機の機種"
-      options:
-        - "PSP-1000"
-        - "PSP-2000"
-        - "PSP-3000"
-        - "PSP Go (N1000)"
-        - "PSP Street (E1000)"
-        - "Not sure / 不明"
-    validations:
-      required: true
-  - type: dropdown
     id: source
     attributes:
       label: "Playback source / 再生元"
@@ -91,7 +78,7 @@ body:
     id: evidence
     attributes:
       label: "Screenshots or diagnostic details / 画像・診断情報"
-      description: "Optional. Drag images or a redacted text log into this field. The final log path may vary by build. Do not upload movie files or secrets."
+      description: "Optional. Drag images or a redacted text log into this field. Do not upload movie files or secrets."
     validations:
       required: false
   - type: checkboxes
